@@ -1,0 +1,18 @@
+:root {
+  /* Light Mode Colors */
+  --background: #ffffff;
+  --text: #1b1a1a;
+  --primary: #e0d61e;
+  --secondary: #444;
+  --card-bg: #f9f9f9;
+  --accent: #e0d61e;
+}
+
+[data-theme="dark"] {
+  --background: #1b1a1afd;
+  --text: #ffffff;
+  --primary: #e0d61e;
+  --secondary: #444;
+  --card-bg: rgba(255, 255, 255, 0.03);
+  --accent: #e0d61e;
+}

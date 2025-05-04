@@ -1,0 +1,170 @@
+/* ==================== NAVBAR STYLES ==================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #232121fd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #e0d61e;
+  font-weight: 600;
+}
+
+/* ==================== NAV LINKS ==================== */
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navLinks li {
+  position: relative;
+}
+
+.navLinks li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.navLinks li a:hover {
+  color: #e0d61e;
+}
+
+.navLinks li a.active {
+  color: #e0d61e;
+}
+
+/* ==================== DROPDOWN MENU ==================== */
+
+.dropdownToggle {
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.dropdownToggle:hover {
+  color: #e0d61e;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1b1a1a;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+  min-width: 220px;
+  z-index: 2000;
+}
+
+.dropdownMenu li {
+  margin: 0.3rem 0;
+}
+
+.dropdownMenu li a {
+  color: #fff;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdownMenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e0d61e;
+  border-radius: 4px;
+  padding-left: 0.3rem;
+}
+
+/* Dropdown animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== THEME TOGGLE & HAMBURGER ==================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.themeToggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.themeToggle:hover {
+  transform: rotate(20deg);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+/* ==================== MOBILE MENU ==================== */
+
+@media (max-width: 992px) {
+  .navLinks {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #1b1a1afd;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .mobileActive {
+    transform: translateX(0);
+  }
+
+  .navLinks li {
+    width: 100%;
+  }
+
+  .navLinks li a.active,
+  .scrollLink.active {
+    color: #e0d61e;
+  }
+
+  .dropdownMenu {
+    position: static;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+    margin-top: 0.3rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+/* ==================== DARK MODE ==================== */

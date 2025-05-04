@@ -1,0 +1,207 @@
+/* ==================== GENERAL PAGE STYLING ==================== */
+
+.page {
+  position: relative;
+  background-color: #1b1a1afd;
+  color: #fff;
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(27, 26, 26, 0.9),
+    rgba(27, 26, 26, 0.95)
+  );
+  z-index: -1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #e0d61e;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e5e5e5;
+}
+
+/* ==================== GRID STYLING ==================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* ==================== FLIP CARD ==================== */
+
+.flipCard {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Front Side */
+.cardFront {
+  background-color: rgba(255, 255, 255, 0.03);
+  position: relative;
+}
+
+.cardImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 2px solid #444;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e0d61e;
+  color: #1b1a1a;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.cardContent {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cardTitle {
+  color: #e0d61e;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Back Side */
+.cardBack {
+  background-color: rgba(255, 255, 255, 0.06);
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContentBack {
+  padding: 1rem;
+  text-align: center;
+}
+
+.cardDescription {
+  color: #e5e5e5;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.cardMore {
+  color: #e0d61e;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+/* ==================== MODAL ==================== */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modalContent {
+  background: #1b1a1a;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.modalImage {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.modalTitle {
+  color: #e0d61e;
+  margin-bottom: 0.5rem;
+}
+
+.modalDescription {
+  color: #e5e5e5;
+  margin-bottom: 1rem;
+}
+
+.modalButton {
+  padding: 0.5rem 1.5rem;
+  background-color: #e0d61e;
+  color: #1b1a1a;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modalButton:hover {
+  background-color: #fff;
+  color: #1b1a1a;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 768px) {
+  .cardImage {
+    height: 140px;
+  }
+}

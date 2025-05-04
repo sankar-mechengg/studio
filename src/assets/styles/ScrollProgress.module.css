@@ -1,0 +1,9 @@
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #e0d61e;
+  z-index: 2000;
+  transition: width 0.25s ease-out;
+}
