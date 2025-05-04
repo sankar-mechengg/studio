@@ -46,7 +46,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/studio">
       {loading ? (
         <Loader />
       ) : (
