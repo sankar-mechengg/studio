@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/studio/static/css/main.d9d1afdc.css",
+    "main.js": "/studio/static/js/main.9bffe8f2.js",
+    "static/media/sankar_prof_pic.png": "/studio/static/media/sankar_prof_pic.ede824ff7af6cbcf8ea6.png",
+    "static/media/1734787939955.jpeg": "/studio/static/media/1734787939955.6d85c2f41afd6b41d2f3.jpeg",
+    "static/media/1678428882132.jpeg": "/studio/static/media/1678428882132.b0d8e0c5c54a6fe9395d.jpeg",
+    "static/media/1708445494892.jpeg": "/studio/static/media/1708445494892.8c9ee0ea9835b1752f27.jpeg",
+    "static/media/1729679651052.jpeg": "/studio/static/media/1729679651052.d1ef7de847cf647b605c.jpeg",
+    "static/media/1719190692121.jpeg": "/studio/static/media/1719190692121.5f9c51fef20a8f416bab.jpeg",
+    "index.html": "/studio/index.html",
+    "main.d9d1afdc.css.map": "/studio/static/css/main.d9d1afdc.css.map",
+    "main.9bffe8f2.js.map": "/studio/static/js/main.9bffe8f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9d1afdc.css",
+    "static/js/main.9bffe8f2.js"
+  ]
+}
